@@ -1,11 +1,11 @@
-## AjoDAO: Solana's DeFi Revolution
+## GroupVault: Solana's DeFi Revolution
 
-AjoDAO is a Solana blockchain DApp that reinvents group savings with digital "pots," mirroring the traditional Tanda club model.
-## Opportunity: AjoDAO's Perfect Fit
+GroupVault is a Solana blockchain DApp that reinvents group savings with digital "pots," mirroring the traditional Tanda club model.
+## Opportunity: GroupVault's Perfect Fit
 
-AjoDAO isn't just an idea; it's a solution that addresses a real need. The evidence is in the numbers. Our initial questionnaire yielded over 100 responses, and what's particularly exciting is that over 90% of respondents indicated that they are currently part of Ajo groups or have a history of participating in them.
+GroupVault isn't just an idea; it's a solution that addresses a real need. The evidence is in the numbers. Our initial questionnaire yielded over 100 responses, and what's particularly exciting is that over 90% of respondents indicated that they are currently part of Ajo groups or have a history of participating in them.
 
-This data showcases a substantial and engaged audience, ready and waiting for a platform like AjoDAO. It's a clear indicator that we're entering a market with existing demand, making AjoDAO's potential for success all the more promising.
+This data showcases a substantial and engaged audience, ready and waiting for a platform like GroupVault. It's a clear indicator that we're entering a market with existing demand, making GroupVault's potential for success all the more promising.
 
 ## The Problem: Bridging Financial Gaps
 
@@ -21,13 +21,13 @@ Our investigation into platforms that aimed to address these issues highlighted 
 
 Another key challenge identified is the geographical restrictions imposed by the reliance on specific currencies. Many existing solutions are confined to certain regions due to currency limitations, limiting accessibility and financial inclusion for individuals and communities in other parts of the world.
 
-## AjoDAO's Solution: Bridging Financial Gaps
+## GroupVault's Solution: Bridging Financial Gaps
 
-AjoDAO is our answer to the challenges presented. We're introducing a revolutionary approach: a DAO-based group savings platform where the use of funds is regulated by individual members of the group. This means each participant has a say in how their funds are utilized, promoting transparency, and empowering users to take control of their financial future.
+GroupVault is our answer to the challenges presented. We're introducing a revolutionary approach: a DAO-based group savings platform where the use of funds is regulated by individual members of the group. This means each participant has a say in how their funds are utilized, promoting transparency, and empowering users to take control of their financial future.
 
-But that's not all. We're taking it a step further. AjoDAO offers opportunities for groups to decide to lock their funds in high-yield, low-risk protocols. This allows groups to make the most of their collective savings, potentially earning more from their contributions, and all while maintaining the utmost security.
+But that's not all. We're taking it a step further. GroupVault offers opportunities for groups to decide to lock their funds in high-yield, low-risk protocols. This allows groups to make the most of their collective savings, potentially earning more from their contributions, and all while maintaining the utmost security.
 
-Our commitment is to bridge these financial gaps and empower users with a more inclusive and reliable financial tool. With AjoDAO, financial control and transparency are in your hands.
+Our commitment is to bridge these financial gaps and empower users with a more inclusive and reliable financial tool. With GroupVault, financial control and transparency are in your hands.
 
 
 
