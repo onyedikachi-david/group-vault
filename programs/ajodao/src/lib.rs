@@ -47,7 +47,12 @@ pub mod ajodao {
     }
 
     // Deposit into pot
-    pub fn deposit(ctx: Context<DepositIntoPot>, amount: u64, _name: String, _creator: Pubkey) -> Result<()> {
+    pub fn deposit(
+        ctx: Context<DepositIntoPot>,
+        amount: u64,
+        _name: String,
+        _creator: Pubkey,
+    ) -> Result<()> {
         ctx.accounts.deposit(amount)
     }
 
