@@ -1,0 +1,210 @@
+cidl: "0.8"
+info:
+  name: GroupVault
+  title: GroupVault Savings Group DApp
+  version: 1.0.0
+  summary: |-
+    GroupVault is a decentralized application on the Solana blockchain that enables users to participate in savings groups, known as "pots". Users can create profiles, create pots with various cycles, join existing pots, make deposits, and withdraw their share when it's their turn. The DApp also manages pot rotation, penalties for defaulters, and pot closure.
+  contact:
+    name: GroupVault Team
+    web: https://groupvault.example.com
+    email: support@GroupVault.example.com
+    git: https://github.com/onyedikachi-david/groupvault
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+types:
+  Profile:
+    summary: User profile information in GroupVault.
+    solana:
+      owner: self
+      seeds:
+        - name: profile
+        - name: user
+          type: sol:pubkey
+    fields:
+      - name: name
+        type: string
+        solana:
+          attributes: [cap:50]
+        description: The name of the user.
+      - name: email
+        type: string
+        solana:
+          attributes: [cap:100]
+        description: The email address of the user.
+      - name: deposits
+        type: u32
+        description: The number of deposits made by the user.
+      - name: total_deposited
+        type: u64
+        description: The total amount deposited by the user.
+  Pot:
+    summary: Represents a savings group pot in GroupVault.
+    solana:
+      owner: self
+      seeds:
+        - name: pot
+        - name: creator
+          type: sol:pubkey
+    fields:
+      - name: name
+        type: string
+        solana:
+          attributes: [cap:50]
+        description: The name of the pot.
+      - name: description
+        type: string
+        solana:
+          attributes: [cap:200]
+        description: A description of the pot.
+      - name: cycle
+        type: string
+        solana:
+          attributes: [cap:10]
+        description: The cycle of the pot (daily, weekly, monthly).
+      - name: creation_date
+        type: string
+        solana:
+          attributes: [cap:10]
+        description: The creation date of the pot.
+      - name: status
+        type: string
+        solana:
+          attributes: [cap:10]
+        description: The status of the pot (open, closed).
+      - name: members
+        type: u32
+        description: The number of members in the pot.
+      - name: total_amount
+        type: u64
+        description: The total amount in the pot.
+      - name: current_rotation
+        type: u32
+        description: The current rotation number of the pot.
+methods:
+  - name: create_profile
+    summary: Create a new user profile.
+    solana:
+      signers:
+        - name: user
+    inputs:
+      - name: profile
+        type: Profile
+        solana:
+          attributes: [init]
+          seeds:
+            user: user
+      - name: name
+        type: string
+        description: The name of the user.
+      - name: email
+        type: string
+        description: The email address of the user.
+  - name: create_pot
+    summary: Create a new savings group pot.
+    solana:
+      signers:
+        - name: creator
+    inputs:
+      - name: pot
+        type: Pot
+        solana:
+          attributes: [init]
+          seeds:
+            creator: creator
+      - name: name
+        type: string
+        description: The name of the pot.
+      - name: description
+        type: string
+        description: A description of the pot.
+      - name: cycle
+        type: string
+        description: The cycle of the pot (daily, weekly, monthly).
+      - name: creation_date
+        type: string
+        description: The creation date of the pot.
+  - name: join_pot
+    summary: Join an existing savings group pot.
+    solana:
+      signers:
+        - name: user
+    inputs:
+      - name: pot
+        type: Pot
+        solana:
+          attributes: [mut]
+          seeds:
+            creator: creator
+      - name: profile
+        type: Profile
+        solana:
+          attributes: [mut]
+          seeds:
+            user: user
+      - name: amount
+        type: u64
+        description: The amount to deposit into the pot.
+  - name: make_deposit
+    summary: Make a deposit into an existing pot.
+    solana:
+      signers:
+        - name: user
+    inputs:
+      - name: pot
+        type: Pot
+        solana:
+          attributes: [mut]
+          seeds:
+            creator: creator
+      - name: profile
+        type: Profile
+        solana:
+          attributes: [mut]
+          seeds:
+            user: user
+      - name: amount
+        type: u64
+        description: The amount to deposit into the pot.
+  - name: withdraw_share
+    summary: Withdraw the user's share from the pot when it's their turn.
+    solana:
+      signers:
+        - name: user
+    inputs:
+      - name: pot
+        type: Pot
+        solana:
+          attributes: [mut]
+          seeds:
+            creator: creator
+      - name: profile
+        type: Profile
+        solana:
+          attributes: [mut]
+          seeds:
+            user: user
+  - name: close_pot
+    summary: Close the pot after the cycle is complete and all members have received their share.
+    solana:
+      signers:
+        - name: creator
+    inputs:
+      - name: pot
+        type: Pot
+        solana:
+          attributes: [mut, close]
+          seeds:
+            creator: creator
+errors:
+  - id: 1
+    msg: Unauthorized access attempt.
+  - id: 2
+    msg: Insufficient balance for deposit.
+  - id: 3
+    msg: Pot is not open for new members.
+  - id: 4
+    msg: Withdrawal not allowed at this time.
+  - id: 5
+    msg: Pot cannot be closed before the cycle ends.
