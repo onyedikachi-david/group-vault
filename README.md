@@ -5,7 +5,7 @@ GroupVault is a Solana blockchain DApp that reinvents group savings with digital
 
 GroupVault isn't just an idea; it's a solution that addresses a real need. The evidence is in the numbers. Our initial questionnaire yielded over 100 responses, and what's particularly exciting is that over 90% of respondents indicated that they are currently part of Ajo groups or have a history of participating in them.
 
-This data showcases a substantial and engaged audience, ready and waiting for a platform like GroupVault. It's a clear indicator that we're entering a market with existing demand, making GroupVault's potential for success all the more promising.
+This data showcases a substantial and engaged audience, ready and waiting for a platform like GroupVault. It's a clear indicator that we'rgite entering a market with existing demand, making GroupVault's potential for success all the more promising.
 
 ## The Problem: Bridging Financial Gaps
 
