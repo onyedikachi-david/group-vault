@@ -1,9 +1,19 @@
+"use client"
 import Image from "next/image";
-
+import { useEffect, useState } from "react";
 import Link from "next/link"
 import { JSX, SVGProps } from "react";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setMounted(true)
+    }
+  }, [])
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white">
       <header className="px-4 lg:px-6 h-14 flex items-center bg-gradient-to-r from-purple-600 to-blue-500">
@@ -12,18 +22,7 @@ export default function Home() {
           <span className="sr-only">GroupVault</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Features
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Pricing
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            About
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Contact
-          </Link>
+          {mounted ? <WalletMultiButton /> : null}
         </nav>
       </header>
       <main className="flex-1">
@@ -34,7 +33,7 @@ export default function Home() {
                 alt="Hero"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
                 height="550"
-                src="/placeholder.svg"
+                src="/vault.jpeg"
                 width="550"
               />
               <div className="flex flex-col justify-center space-y-4">
