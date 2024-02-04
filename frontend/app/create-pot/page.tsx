@@ -190,7 +190,7 @@ export default function CreatePot() {
                                                         <Select onValueChange={field.onChange}>
                                                             <FormControl className="text-black">
                                                                 <SelectTrigger>
-                                                                    <SelectValue placeholder="Select a verified email to display" />
+                                                                    <SelectValue placeholder="Select a prefered cycle" />
                                                                 </SelectTrigger>
                                                             </FormControl>
                                                             <SelectContent className="text-black">
