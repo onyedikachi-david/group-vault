@@ -157,7 +157,7 @@ export default function Home() {
               <div className="flex flex-col items-start space-y-4">
                 <div className="inline-block rounded-lg bg-gray-700 px-3 py-1 text-sm">Security</div>
                 <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
-                  GroupVault is a decentralized platform built on the Solana blockchain, ensuring secure and transparent savings management. It provides a global edge to ensure fast and reliable service for every user, and the tools to monitor every aspect of your group savings. GroupVaults infrastructure is designed to scale dynamically with your group's savings, ensuring a seamless experience as your group grows.
+                  GroupVault is a decentralized platform built on the Solana blockchain, ensuring secure and transparent savings management. It provides a global edge to ensure fast and reliable service for every user, and the tools to monitor every aspect of your group savings. GroupVaults infrastructure is designed to scale dynamically with your groups savings, ensuring a seamless experience as your group grows.
                 </p>
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md border border-white bg-transparent px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-200 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
