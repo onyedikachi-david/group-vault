@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link"
 import { JSX, SVGProps } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { LayoutDashboardIcon } from "lucide-react";
 
 
 export default function Home() {
@@ -20,6 +21,10 @@ export default function Home() {
         <Link className="flex items-center justify-center" href="#">
           <MountainIcon className="h-6 w-6 text-white" />
           <span className="sr-only">GroupVault</span>
+        </Link>
+        <Link href="/dashboard" className="items-center">
+          <LayoutDashboardIcon className=""></LayoutDashboardIcon>
+
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           {mounted ? <WalletMultiButton /> : null}
@@ -123,25 +128,14 @@ export default function Home() {
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-                Experience the workflow the best frontend teams love.
+                Experience the ideal thrift in the decentralized world.
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
-                Let your team focus on shipping features instead of managing infrastructure with automated CI/CD.
+                Decide on how your funds are invested and where.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-              <Link
-                className="inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-gray-900 shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
-                href="#"
-              >
-                Contact Sales
-              </Link>
-              <Link
-                className="inline-flex h-10 items-center justify-center rounded-md border border-white bg-transparent px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-200 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
-                href="#"
-              >
-                Learn more
-              </Link>
+
             </div>
           </div>
         </section>
@@ -151,7 +145,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="inline-block rounded-lg bg-gray-700 px-3 py-1 text-sm">Performance</div>
                 <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] text-white">
-                  Traffic spikes should be exciting, not scary.
+                  Traditional thrift should be exciting, not scary.
                 </h2>
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-900 shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
@@ -163,8 +157,7 @@ export default function Home() {
               <div className="flex flex-col items-start space-y-4">
                 <div className="inline-block rounded-lg bg-gray-700 px-3 py-1 text-sm">Security</div>
                 <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
-                  Fully managed infrastructure designed to scale dynamically with your traffic, a global edge to ensure
-                  your site is fast for every customer, and the tools to monitor every aspect of your app.
+                  GroupVault is a decentralized platform built on the Solana blockchain, ensuring secure and transparent savings management. It provides a global edge to ensure fast and reliable service for every user, and the tools to monitor every aspect of your group savings. GroupVaults infrastructure is designed to scale dynamically with your group's savings, ensuring a seamless experience as your group grows.
                 </p>
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md border border-white bg-transparent px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-200 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
@@ -251,13 +244,13 @@ export default function Home() {
                 className="inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-gray-900 shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
                 href="#"
               >
-                Contact Sales
+                Join
               </Link>
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md border border-white bg-transparent px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-200 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
                 href="#"
               >
-                Learn more
+                Create
               </Link>
             </div>
           </div>
